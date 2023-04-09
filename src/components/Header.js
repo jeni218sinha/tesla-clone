@@ -12,17 +12,15 @@ function Header() {
 
     return (
         <Container>
-            <a>
-                <img src="/images/logo.svg" />
-            </a>
+            <ImgBtn src="/images/logo.svg" alt="Logo not found" />
             <Menu>
                 {cars && cars.map((car, index) => (
-                    <a href="#" key={index}>{car}</a>
+                    <a href="/#" key={index}>{car}</a>
                 ))}
             </Menu>
             <RightMenu>
-                <a href="#">Shop</a>
-                <a href="#">Tesla Account</a>
+                <a href="/#">Shop</a>
+                <a href="/#">Tesla Account</a>
                 <CustomMenu onClick={() => setBurgerStatus(true)}></CustomMenu>
             </RightMenu>
             <BurgerNav show={burgerStatus}>
@@ -30,24 +28,28 @@ function Header() {
                     <CustomClose onClick={() => setBurgerStatus(false)}> </CustomClose>
                 </CloseWrapper>
                 {cars && cars.map((car, index) => (
-                    <li><a href="#" key={index}>{car}</a></li>
+                    <li><a href="/#" key={index}>{car}</a></li>
                 ))}
-                <li><a href="#">Existing Inventory</a></li>
-                <li><a href="#">Used Inventory</a></li>
-                <li><a href="#">Cybertruck</a></li>
-                <li><a href="#">Trade-in</a></li>
-                <li><a href="#">Roadster</a></li>
-                <li><a href="#">Semi</a></li>
-                <li><a href="#">Charging</a></li>
-                <li><a href="#">Power</a></li>
-                <li><a href="#">Utilities</a></li>
-                <li><a href="#">Test Drive</a></li>
+                <li><a href="/#">Existing Inventory</a></li>
+                <li><a href="/#">Used Inventory</a></li>
+                <li><a href="/#">Cybertruck</a></li>
+                <li><a href="/#">Trade-in</a></li>
+                <li><a href="/#">Roadster</a></li>
+                <li><a href="/#">Semi</a></li>
+                <li><a href="/#">Charging</a></li>
+                <li><a href="/#">Power</a></li>
+                <li><a href="/#">Utilities</a></li>
+                <li><a href="/#">Test Drive</a></li>
             </BurgerNav>
         </Container>
     )
 }
 
 export default Header
+
+const ImgBtn = styled.img`
+cursor: pointer;
+`
 
 const Container = styled.div`
 min-height: 60px;

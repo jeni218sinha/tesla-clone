@@ -21,7 +21,7 @@ function Section({ title, description, backgroundImg, leftBtnText, rightBtnText 
                             </RightButton>
                         }
                     </ButtonGroup>
-                    <DownArrow src="/images/down-arrow.svg">
+                    <DownArrow src="/images/down-arrow.svg" alt="Down Arrow Not Found">
                     </DownArrow>
                 </Buttons>
             </Fade>
